@@ -16,12 +16,12 @@ public class DemoApplication {
         SpringApplication.run(DemoApplication.class, args);
     }
 
-    @Bean
-    CommandLineRunner commandLineRunner(PostClient postClient) {
-        return args -> {
-            List<Post> posts = postClient.getPosts();
-            System.out.println(posts);
-        };
-    }
+//    @Bean
+//    CommandLineRunner commandLineRunner(PostClient postClient) {
+//        return args -> {
+//            List<Post> posts = postClient.getPosts();
+//            System.out.println(posts);
+//        };
+//    }
 
 }
