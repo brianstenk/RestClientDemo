@@ -1,6 +1,7 @@
 package com.example.demo.post;
 
 import org.springframework.core.ParameterizedTypeReference;
+import org.springframework.http.client.JdkClientHttpRequestFactory;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestClient;
 
@@ -14,6 +15,7 @@ public class PostClient {
     public PostClient(RestClient.Builder builder) {
         this.restClient = builder
                 .baseUrl("https://jsonplaceholder.typicode.com")
+                .requestFactory(new JdkClientHttpRequestFactory())
                 .build();
     }
 
